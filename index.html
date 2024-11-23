@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quotes</title>
+        <style>
+            img{
+                width: 600px;
+                height: auto;
+            }
+
+            hi{
+                color: green;
+            }
+        </style>
+        <body>
+            <h1>Saturn</h1>
+            <p>Para 1</p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/800px-Saturn_during_Equinox.jpg">
+
+            <blockquote>"Had I been present at the Creation, I would have given some useful hints for the better ordering of the universe."</blockquote>
+            <button onclick ="changeQuote()">Change Quote</button>
+
+            <script>
+                var index = 0;
+
+                function changeQuote() {
+                    var quotes=[
+                        `"Learning one step at a time." - Me`,
+                        `"Hammerhacks is fun!" - Me`,
+                        `"Yeah, here's Saturn" - Me`
+                    ];
+
+                    var blockquote = document.querySelector("blockquote");
+                    blockquote.innerHTML = quotes[index];
+
+                    index++;
+                    if (index >= 3) {
+                        index = 0;
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>
